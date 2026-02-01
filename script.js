@@ -1,51 +1,62 @@
 // FirstCall.ai - Landing Page Scripts
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     // Mobile menu toggle
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
-    
+
     if (mobileMenuBtn) {
-        mobileMenuBtn.addEventListener('click', function() {
+        mobileMenuBtn.addEventListener('click', function () {
             navLinks.classList.toggle('active');
             this.classList.toggle('active');
         });
     }
-    
+
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+            const href = this.getAttribute('href');
+
+            // Handle logo click (href="#") - scroll to top
+            if (href === '#') {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
                 });
-                // Close mobile menu if open
-                navLinks.classList.remove('active');
-                mobileMenuBtn.classList.remove('active');
+            } else {
+                const target = document.querySelector(href);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             }
+
+            // Close mobile menu if open
+            navLinks.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
         });
     });
-    
+
     // Navbar background on scroll
     const nav = document.querySelector('.nav');
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (window.scrollY > 50) {
             nav.classList.add('scrolled');
         } else {
             nav.classList.remove('scrolled');
         }
     });
-    
+
     // Animate elements on scroll
     const observerOptions = {
         root: null,
         rootMargin: '0px',
         threshold: 0.1
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -54,12 +65,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, observerOptions);
-    
+
     document.querySelectorAll('.feature-card, .problem-card, .pricing-card, .step').forEach(el => {
         el.classList.add('animate-target');
         observer.observe(el);
     });
-    
+
     // Add animation styles dynamically
     const style = document.createElement('style');
     style.textContent = `
@@ -100,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     `;
     document.head.appendChild(style);
-    
+
     // Typing effect for hero (optional enhancement)
     const heroTitle = document.querySelector('.hero-title');
     if (heroTitle) {
@@ -110,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Track button clicks (for analytics)
 document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function () {
         const text = this.textContent.trim();
         console.log('Button clicked:', text);
         // Add your analytics tracking here
