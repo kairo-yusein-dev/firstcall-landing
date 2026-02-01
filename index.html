@@ -4,17 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FirstCall.ai - Първи при собствениците</title>
+    <title>FirstCall.ai - Първи при собствениците | AI имотни известия</title>
     <meta name="description"
-        content="AI система за откриване на имоти директно от собственици. Получавайте известия в реално време преди конкуренцията.">
+        content="AI система за откриване на имоти директно от собственици. Получавайте известия в реално време преди конкуренцията. 500+ обяви/ден, 75%+ точност.">
     <meta name="keywords"
-        content="имоти, недвижими имоти, без брокер, от собственик, продажба, наеми, София, България, AI">
+        content="имоти, недвижими имоти, без брокер, от собственик, продажба, наеми, София, България, AI, известия, Telegram">
+    <meta name="author" content="FirstCall.ai">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://firstcall.ai">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="FirstCall.ai - Първи при собствениците">
-    <meta property="og:description" content="AI система за откриване на имоти директно от собственици в реално време.">
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://firstcall-landing.vercel.app">
+    <meta property="og:url" content="https://firstcall.ai">
+    <meta property="og:title" content="FirstCall.ai - Първи при собствениците">
+    <meta property="og:description"
+        content="AI система за откриване на имоти директно от собственици. Известия в реално време преди конкуренцията.">
+    <meta property="og:image" content="https://firstcall.ai/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="FirstCall.ai - AI имотни известия">
+    <meta property="og:locale" content="bg_BG">
+    <meta property="og:site_name" content="FirstCall.ai">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://firstcall.ai">
+    <meta name="twitter:title" content="FirstCall.ai - Първи при собствениците">
+    <meta name="twitter:description" content="AI система за откриване на имоти директно от собственици в реално време.">
+    <meta name="twitter:image" content="https://firstcall.ai/og-image.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,6 +40,32 @@
 
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/svg+xml" href="logo.svg">
+    <link rel="apple-touch-icon" href="logo.svg">
+    <meta name="theme-color" content="#6366f1">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "FirstCall.ai",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, Telegram",
+        "description": "AI система за откриване на имоти директно от собственици в реално време",
+        "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "0",
+            "highPrice": "99",
+            "priceCurrency": "BGN",
+            "offerCount": "2"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "50"
+        }
+    }
+    </script>
 </head>
 
 <body>
@@ -37,7 +80,7 @@
                 <a href="#problem">Проблемът</a>
                 <a href="#solution">Решението</a>
                 <a href="#pricing">Цени</a>
-                <a href="#cta" class="btn btn-nav">Започни безплатно</a>
+                <a href="#cta" class="btn btn-primary btn-nav">Започни безплатно</a>
             </div>
             <button class="mobile-menu-btn" aria-label="Menu">
                 <span></span>
@@ -93,27 +136,7 @@
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="phone-mockup">
-                    <div class="phone-screen">
-                        <div class="chat-message">
-                            <div class="msg-header">
-                                <span class="msg-icon">🦅</span>
-                                <span class="msg-title">Нов лийд [ВИСОКА ВЕРОЯТНОСТ]</span>
-                            </div>
-                            <div class="msg-body">
-                                <p><strong>Тип:</strong> 🏠 Продажба</p>
-                                <p><strong>Имот:</strong> Тристаен в Лозенец, 95м²</p>
-                                <p><strong>Цена:</strong> 185 000 EUR</p>
-                                <p><strong>Телефон:</strong> <code>0888 XXX XXX</code></p>
-                                <p class="msg-note">✓ Верифициран собственик</p>
-                            </div>
-                            <div class="msg-buttons">
-                                <button class="msg-btn positive">👍 Потвърди</button>
-                                <button class="msg-btn negative">👎 Грешка</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <img src="hero-phone.png" alt="FirstCall.ai Telegram известие" class="hero-phone-img">
             </div>
         </div>
     </section>
@@ -180,7 +203,8 @@
                         <div class="step-text">
                             <h3>Незабавно известяване</h3>
                             <p>Получавате готовия контакт директно в Telegram веднага след публикацията. Вие звъните
-                                <strong>пръв</strong>.</p>
+                                <strong>пръв</strong>.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -202,16 +226,16 @@
             <div class="trust-content">
                 <div class="trust-item">
                     <span class="trust-number">75%+</span>
-                    <span class="trust-label">точност на откриване</span>
+                    <span class="trust-label">точност на филтриране</span>
                 </div>
                 <div class="trust-divider"></div>
                 <div class="trust-item">
-                    <span class="trust-number">1000+</span>
+                    <span class="trust-number">500+</span>
                     <span class="trust-label">анализирани обяви/ден</span>
                 </div>
                 <div class="trust-divider"></div>
                 <div class="trust-item">
-                    <span class="trust-number">Sofia</span>
+                    <span class="trust-number">София</span>
                     <span class="trust-label">активно покритие</span>
                 </div>
             </div>
@@ -238,7 +262,7 @@
                     <ul class="pricing-features">
                         <li>✓ 3 известия на ден</li>
                         <li>✓ София</li>
-                        <li>✓ Продажби + Наеми</li>
+                        <li>✓ Наеми</li>
                         <li>✓ Telegram доставка</li>
                     </ul>
                     <a href="https://t.me/firstcall_ai_bot" class="btn btn-secondary btn-block" target="_blank">Започни
@@ -256,37 +280,13 @@
                     </div>
                     <ul class="pricing-features">
                         <li>✓ <strong>Неограничени</strong> известия</li>
-                        <li>✓ София</li>
-                        <li>✓ Продажби + Наеми</li>
+                        <li>✓ Филтър квартали София</li>
+                        <li>✓ <strong>Продажби</strong> + Наеми</li>
                         <li>✓ Telegram доставка</li>
-                        <li>✓ Email support</li>
                     </ul>
                     <a href="https://t.me/firstcall_ai_bot" class="btn btn-primary btn-block" target="_blank">Заяви
                         достъп</a>
                 </div>
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <h3>Pro</h3>
-                        <div class="price">
-                            <span class="currency">BGN</span>
-                            <span class="amount">199</span>
-                            <span class="period">/месец</span>
-                        </div>
-                    </div>
-                    <ul class="pricing-features">
-                        <li>✓ Неограничени известия</li>
-                        <li>✓ <strong>Всички градове</strong></li>
-                        <li>✓ <strong>Приоритетна</strong> доставка</li>
-                        <li>✓ Седмични отчети</li>
-                        <li>✓ Персонален support</li>
-                    </ul>
-                    <a href="https://t.me/firstcall_ai_bot" class="btn btn-secondary btn-block" target="_blank">Заяви
-                        достъп</a>
-                </div>
-            </div>
-            <div class="agency-note">
-                <p>🏢 <strong>За агенции:</strong> Работим върху план за екипи с централизиран dashboard и API. <a
-                        href="mailto:contact@firstcall.ai">Свържете се с нас</a> за ранен достъп.</p>
             </div>
         </div>
     </section>
@@ -317,7 +317,7 @@
                         <img src="logo.svg" alt="FirstCall.ai Logo" class="logo-img">
                         <span class="logo-text">FirstCall<span class="logo-dot">.ai</span></span>
                     </a>
-                    <p>Верифицирани лийдове от собственици за българския имотен пазар.</p>
+                    <p>Известия за нови обяви от собственици за българския имотен пазар.</p>
                 </div>
                 <div class="footer-links">
                     <div class="footer-col">
@@ -328,7 +328,7 @@
                     </div>
                     <div class="footer-col">
                         <h4>Контакт</h4>
-                        <a href="mailto:contact@firstcall.ai">contact@firstcall.ai</a>
+                        <a href="mailto:kairo.yusein@gmail.com">kairo.yusein@gmail.com</a>
                         <a href="https://t.me/firstcall_ai_bot" target="_blank">Telegram Bot</a>
                     </div>
                 </div>
