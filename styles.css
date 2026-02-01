@@ -577,6 +577,21 @@ ul {
     color: var(--gray-500);
 }
 
+.problem-summary {
+    margin-top: 40px;
+    text-align: center;
+    padding: 24px 32px;
+    background: rgba(99, 102, 241, 0.05);
+    border: 1px solid rgba(99, 102, 241, 0.1);
+    border-radius: var(--radius-lg);
+}
+
+.problem-summary p {
+    font-size: 17px;
+    color: var(--gray-700);
+    margin: 0;
+}
+
 @media (max-width: 768px) {
     .problem-grid {
         grid-template-columns: 1fr;
@@ -982,6 +997,29 @@ ul {
     text-align: center;
     color: var(--gray-500);
     margin-top: 32px;
+}
+
+.agency-note {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px 32px;
+    background: var(--gray-50);
+    border-radius: var(--radius-lg);
+}
+
+.agency-note p {
+    margin: 0;
+    color: var(--gray-600);
+}
+
+.agency-note a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+.beta-badge {
+    background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%) !important;
+    color: var(--white) !important;
 }
 
 @media (max-width: 992px) {
