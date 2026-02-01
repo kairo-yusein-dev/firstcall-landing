@@ -456,6 +456,14 @@ ul {
     margin-bottom: 6px;
 }
 
+.msg-body .msg-note {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--gray-700);
+    color: var(--success);
+    font-weight: 600;
+}
+
 .msg-body code {
     background: var(--gray-700);
     padding: 2px 6px;
@@ -572,6 +580,145 @@ ul {
 @media (max-width: 768px) {
     .problem-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ========================================
+   Solution Section
+   ======================================== */
+
+.solution {
+    padding: var(--section-padding) 0;
+}
+
+.solution-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.solution-step {
+    display: flex;
+    gap: 20px;
+    padding: 24px;
+    background: var(--white);
+    border: 1px solid var(--gray-100);
+    border-radius: var(--radius-lg);
+    margin-bottom: 16px;
+    transition: all 0.3s ease;
+}
+
+.solution-step:hover {
+    border-color: var(--primary-light);
+    box-shadow: var(--shadow-md);
+}
+
+.step-icon {
+    font-size: 32px;
+    flex-shrink: 0;
+}
+
+.step-text h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 8px;
+}
+
+.step-text p {
+    font-size: 15px;
+    color: var(--gray-500);
+    line-height: 1.6;
+}
+
+.solution-benefits {
+    background: var(--gradient-dark);
+    border-radius: var(--radius-xl);
+    padding: 40px;
+    color: var(--white);
+    position: sticky;
+    top: 100px;
+}
+
+.solution-benefits h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.solution-benefits ul {
+    list-style: none;
+}
+
+.solution-benefits li {
+    padding: 12px 0;
+    font-size: 16px;
+    opacity: 0.9;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.solution-benefits li:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 992px) {
+    .solution-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .solution-benefits {
+        position: static;
+    }
+}
+
+/* ========================================
+   Trust Section
+   ======================================== */
+
+.trust {
+    padding: 60px 0;
+    background: var(--gray-50);
+}
+
+.trust-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+}
+
+.trust-item {
+    text-align: center;
+}
+
+.trust-number {
+    display: block;
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.trust-label {
+    font-size: 14px;
+    color: var(--gray-500);
+}
+
+.trust-divider {
+    width: 1px;
+    height: 50px;
+    background: var(--gray-300);
+}
+
+@media (max-width: 768px) {
+    .trust-content {
+        flex-direction: column;
+        gap: 32px;
+    }
+    
+    .trust-divider {
+        width: 60px;
+        height: 1px;
     }
 }
 
